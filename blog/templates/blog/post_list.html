@@ -4,19 +4,15 @@
     </head>
     <body>
         <div>
-            <h1><a href="">胡铮是傻逼</a></h1>
+          <h1><a href="/">胡铮大傻逼</a></h1>
         </div>
 
-        <div>
-            <h2><a href="">遇见胡铮大傻逼那天</a></h2>
-            <p>欧洲城穿越网咖MY店</p>
-            <p>2017.01.23</p>
-        </div>
-
-        <div>
-            <h2><a href="">胡铮大傻逼来湾湾找我</a></h2>
-            <p>台北桃园机场国际到达</p>
-            <p>2017.04.08</p>
-        </div>
+        {% for post in posts %}
+            <div>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+              <p>published:{{ post.published_date }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
